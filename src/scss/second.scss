@@ -1,2 +1,52 @@
 .second__section {
+	padding: 55px 0 32px;
+}
+
+.second__description {
+	max-width: 570px;
+	text-align: center;
+	margin: 0 auto 32px;
+
+	.second__title {
+		@include h2-style;
+		margin-bottom: 23px;
+	}
+
+	.second__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+	}
+}
+
+.second__cards {
+	@include flex-row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.second__card {
+		@include flex-column;
+		align-items: center;
+		flex-basis: 370px;
+
+		border-radius: 3px;
+		box-shadow: $shadow;
+
+		padding: 32px 24px;
+		margin-bottom: 32px;
+
+		&-image {
+			margin-bottom: 11px;
+		}
+
+		&-title {
+			@include h4-style;
+			margin-bottom: 9px;
+		}
+
+		&-text {
+			@include text-style($secondaryFontRegular);
+			text-align: center;
+			color: rgba($black, 0.5);
+		}
+	}
 }
