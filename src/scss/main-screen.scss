@@ -1,0 +1,43 @@
+.main {
+	background: $gradient;
+
+	position: relative;
+}
+
+.main__description {
+	max-width: 570px;
+	padding: 160px 0;
+
+	.main__title {
+		@include h1-style;
+
+		margin-bottom: 26px;
+	}
+
+	.main__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $white;
+
+		margin-bottom: 34px;
+	}
+
+	.main__button {
+		button {
+			@include text-style($primaryFontBold);
+			color: #fff;
+
+			border-radius: 24px;
+			background-color: $yellow;
+
+			padding: 12px 47px;
+		}
+	}
+}
+
+.main__image {
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

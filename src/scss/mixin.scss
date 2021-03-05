@@ -1,0 +1,50 @@
+// ============ flex ============
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+// ============ text style ============
+@mixin h1-style {
+	font-family: $primaryFontBold;
+	font-size: 72px;
+	line-height: 72px;
+	color: $white;
+}
+@mixin h2-style {
+	font-family: $primaryFontBold;
+	font-size: 56px;
+	line-height: 64px;
+	color: $black;
+}
+@mixin h3-style {
+	font-family: $primaryFontBold;
+	font-size: 40px;
+	line-height: 48px;
+	color: $black;
+}
+@mixin h4-style {
+	font-family: $primaryFontBold;
+	font-size: 24px;
+	line-height: 32px;
+	color: $black;
+}
+@mixin text-style($f) {
+	font-family: $f;
+	font-size: 16px;
+	line-height: 24px;
+}
+@mixin small-text-style {
+	font-family: $secondaryFontRegular;
+	font-size: 16px;
+	line-height: 24px;
+	color: $black;
+	opacity: 0.5;
+
+	// ? что это за свойство
+	// mix-blend-mode: normal;
+}

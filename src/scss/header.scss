@@ -1,0 +1,39 @@
+.header {
+	background: rgba($violet, 0.8);
+	position: relative;
+	z-index: 1000;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 25px 0;
+	}
+}
+
+.header__logo {
+	display: flex;
+}
+
+.header__nav {
+	display: flex;
+
+	.nav__links {
+		display: flex;
+		.nav__link {
+			@include text-style($secondaryFontSemiBold);
+			color: $white;
+
+			margin-right: 56px;
+		}
+	}
+
+	.nav__menu {
+		display: flex;
+
+		img:first-child {
+			margin-right: 32px;
+		}
+	}
+}
