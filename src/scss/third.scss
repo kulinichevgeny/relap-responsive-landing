@@ -17,13 +17,10 @@
 	border-radius: 3px;
 	background: $gradient;
 
-	position: relative;
-	z-index: 10;
-
 	img {
 		border-radius: 3px;
 
-		position: absolute;
+		position: relative;
 		bottom: 30px;
 		left: 30px;
 	}

@@ -43,6 +43,11 @@ button {
 
 input {
 	font-family: inherit;
+
+	&:focus {
+		outline: none;
+		box-shadow: $shadow;
+	}
 }
 
 ul {
