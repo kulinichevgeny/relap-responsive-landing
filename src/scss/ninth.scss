@@ -1,0 +1,47 @@
+.ninth__section {
+	background-color: $pinkLight;
+	padding: 55px 0 96px;
+}
+
+.ninth__title {
+	@include h2-style;
+	margin-bottom: 57px;
+}
+
+.ninth__cards {
+	@include flex-row;
+	justify-content: space-between;
+
+	.ninth__card {
+		max-width: 370px;
+		width: 100%;
+
+		box-shadow: $shadow;
+		background-color: $white;
+		transition: 0.2s linear;
+
+		&:hover {
+			box-shadow: $shadow-hover;
+		}
+
+		&-container {
+			padding: 32px 32px 50px;
+		}
+
+		&-date {
+			@include small-text-style;
+		}
+
+		&-title {
+			@include h4-style;
+			margin-top: 15px;
+			margin-bottom: 25px;
+			padding-right: 20px;
+		}
+
+		&-text {
+			@include text-style($secondaryFontRegular);
+			color: rgba($black, 0.5);
+		}
+	}
+}
