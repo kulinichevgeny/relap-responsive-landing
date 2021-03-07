@@ -1,0 +1,95 @@
+.fifth__section {
+	padding: 55px 0 112px;
+	background-color: $pinkLight;
+
+	.container {
+		@include flex-column;
+	}
+}
+
+.fifth__description {
+	text-align: center;
+	margin-bottom: 48px;
+
+	.fifth__title {
+		@include h2-style;
+		margin-bottom: 23px;
+	}
+
+	.fifth__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+	}
+}
+
+.fifth__cards {
+	@include flex-row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.fifth__card {
+	flex-basis: 370px;
+	text-align: center;
+
+	box-shadow: $shadow;
+	border-radius: 3px;
+	background-image: $gradient;
+	background-repeat: no-repeat;
+	background-size: 0%;
+	background-position: center;
+
+	padding: 53px 105px 48px;
+
+	transition: background-size 0.2s linear;
+
+	&:hover {
+		background-size: 100%;
+
+		.fifth__card-body__title,
+		.fifth__card-body__price,
+		.fifth__card-body__list {
+			color: $white;
+		}
+
+		button {
+			background-color: $yellow;
+			color: $white !important;
+		}
+	}
+
+	.fifth__card-body {
+		&__title {
+			@include h4-style;
+			margin-bottom: 7px;
+			transition: color 0.2s linear;
+		}
+
+		&__price {
+			@include h1-style;
+			color: $black;
+			margin-bottom: 26px;
+			transition: color 0.2s linear;
+		}
+
+		&__list {
+			@include text-style($secondaryFontRegular);
+			color: rgba($black, 0.5);
+			margin-bottom: 42px;
+			transition: color 0.2s linear;
+		}
+
+		&__button {
+			button {
+				@include text-style($secondaryFontBold);
+				color: $pinkDark;
+
+				border: 1px solid $pinkDark;
+				border-radius: 24px;
+				transition: 0.2s linear;
+
+				padding: 12px 48px;
+			}
+		}
+	}
+}

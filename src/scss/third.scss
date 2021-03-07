@@ -1,0 +1,83 @@
+.third__section {
+	background-color: $pinkLight;
+
+	padding: 144px 0 112px;
+
+	.container {
+		@include flex-row;
+		justify-content: space-between;
+	}
+}
+
+.third__image {
+	max-width: 570px;
+	min-height: 512px;
+	width: 100%;
+
+	border-radius: 3px;
+	background: $gradient;
+
+	position: relative;
+	z-index: 10;
+
+	img {
+		border-radius: 3px;
+
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+	}
+}
+
+.third__description {
+	max-width: 470px;
+
+	.third__title {
+		@include h2-style;
+		margin-bottom: 23px;
+	}
+
+	.third__suptext {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+		margin-bottom: 6px;
+	}
+
+	.third__subtext {
+		@include text-style($secondaryFontRegular);
+		color: rgba($black, 0.5);
+		margin-bottom: 36px;
+	}
+
+	// ======== stats ========
+	.third__stats {
+		@include flex-row;
+		margin-bottom: 40px;
+
+		.stats__title {
+			@include h3-style;
+			margin-bottom: 2px;
+		}
+
+		.stats__text {
+			@include small-text-style;
+		}
+
+		&-left {
+			margin-right: 118px;
+		}
+	}
+
+	// ======== button ========
+	.third__button {
+		button {
+			@include text-style($secondaryFontBold);
+			color: $white;
+
+			border-radius: 24px;
+			background-color: $pinkDark;
+
+			padding: 12px 54px;
+		}
+	}
+}

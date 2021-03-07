@@ -17,5 +17,5 @@ $yellow: #ffc300;
 $gradient: linear-gradient(to left bottom, #3023ae 0%, #c86dd7 100%);
 
 // ============ shadow ============
-$shadow: 16px 16px 48px rgba(0, 0, 0, 0.15);
-$shadow-hover: 16px 16px 48px rgba(0, 0, 0, 0.2);
+$shadow: 16px 16px 48px rgba($black, 0.15);
+$shadow-hover: 8px 8px 48px rgba($black, 0.3);
