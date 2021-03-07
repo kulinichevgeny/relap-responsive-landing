@@ -1,0 +1,114 @@
+.tenth__section {
+	padding: 103px 0 112px;
+
+	.container {
+		@include flex-row;
+		justify-content: space-between;
+	}
+}
+
+.tenth__description {
+	max-width: 470px;
+	width: 100%;
+
+	.tenth__title {
+		@include h2-style;
+		margin-bottom: 39px;
+	}
+
+	.tenth__text,
+	.tenth__address,
+	.tenth__phone {
+		@include text-style($secondaryFontRegular);
+		color: rgba($black, 0.5);
+	}
+
+	.tenth__text {
+		margin-bottom: 40px;
+	}
+
+	.tenth__subtitle {
+		@include h4-style;
+		margin-bottom: 25px;
+	}
+
+	.tenth__address {
+		margin-bottom: 40px;
+	}
+
+	.tenth__phone {
+		margin-bottom: 50px;
+	}
+
+	.tenth__social {
+		a:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+}
+
+.tenth__form {
+	max-width: 570px;
+	width: 100%;
+
+	border-radius: 3px;
+	box-shadow: $shadow;
+	padding: 37px 32px 48px;
+
+	&-title {
+		@include h4-style;
+		margin-bottom: 31px;
+	}
+
+	&-label {
+		font-family: $secondaryFontBold;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 15px;
+		text-transform: uppercase;
+
+		margin-bottom: 13px;
+	}
+
+	&-input {
+		@include text-style($secondaryFontRegular);
+		color: rgba($black, 0.5);
+
+		width: 100%;
+
+		border-radius: 3px;
+		border: 1px solid #dadada;
+
+		padding: 12px 16px;
+		margin-bottom: 20px;
+
+		&.input-message {
+			padding: 12px 16px 100px;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: $shadow;
+		}
+	}
+
+	&-button {
+		button {
+			@include text-style($secondaryFontBold);
+			color: $white;
+
+			width: 100%;
+
+			border-radius: 24px;
+			background-color: $pinkDark;
+			transition: 0.2s linear;
+
+			padding: 12px 54px;
+
+			&:hover {
+				border-color: $yellow;
+				background-color: $yellow;
+			}
+		}
+	}
+}
