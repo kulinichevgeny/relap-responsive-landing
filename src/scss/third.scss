@@ -76,8 +76,14 @@
 
 			border-radius: 24px;
 			background-color: $pinkDark;
+			transition: 0.2s linear;
 
 			padding: 12px 54px;
+
+			&:hover {
+				border-color: $yellow;
+				background-color: $yellow;
+			}
 		}
 	}
 }

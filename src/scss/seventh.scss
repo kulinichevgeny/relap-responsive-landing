@@ -1,0 +1,108 @@
+.seventh__section {
+	background-color: $pinkLight;
+	padding: 63px 0 112px;
+
+	.container {
+		@include flex-column;
+	}
+}
+
+.secenth__section-description {
+	@include flex-row;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 64px;
+
+	&__title {
+		@include h2-style;
+	}
+
+	&__text {
+		@include text-style($secondaryFontRegular);
+		color: rgba($black, 0.5);
+		max-width: 370px;
+	}
+
+	&__button {
+		button {
+			@include text-style($secondaryFontBold);
+			color: $pinkDark;
+
+			border: 1px solid $pinkDark;
+			border-radius: 24px;
+			transition: 0.2s linear;
+
+			padding: 12px 62px;
+
+			&:hover {
+				color: $white;
+
+				border-color: $yellow;
+				background-color: $yellow;
+			}
+		}
+	}
+}
+
+.secenth__section-cards {
+	@include flex-row;
+	justify-content: space-between;
+}
+
+.secenth__section-card {
+	@include flex-column;
+	justify-content: flex-end;
+
+	height: 464px;
+
+	padding: 0 0 40px 32px;
+
+	transition: box-shadow 0.2s linear;
+
+	&:first-child {
+		max-width: 570px;
+		width: 100%;
+
+		background-image: url(../img/section-7-veritatis/flower.png);
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(2) {
+		max-width: 270px;
+		width: 100%;
+
+		background-image: url(../img/section-7-veritatis/wineglass.png);
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:last-child {
+		max-width: 270px;
+		width: 100%;
+
+		background-image: url(../img/section-7-veritatis/pen.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:hover {
+		box-shadow: $shadow-hover;
+	}
+
+	&__title {
+		margin-bottom: 11px;
+
+		a {
+			@include h4-style;
+			color: $white;
+		}
+	}
+
+	&__text {
+		@include small-text-style;
+		color: $white;
+	}
+}

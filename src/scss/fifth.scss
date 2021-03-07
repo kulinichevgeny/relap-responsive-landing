@@ -34,17 +34,12 @@
 
 	box-shadow: $shadow;
 	border-radius: 3px;
-	background-image: $gradient;
-	background-repeat: no-repeat;
-	background-size: 0%;
-	background-position: center;
-
+	background: $white;
 	padding: 53px 105px 48px;
-
-	transition: background-size 0.2s linear;
+	background-image: none;
 
 	&:hover {
-		background-size: 100%;
+		background-image: $gradient;
 
 		.fifth__card-body__title,
 		.fifth__card-body__price,
