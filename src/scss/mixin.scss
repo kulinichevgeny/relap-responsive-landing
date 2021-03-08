@@ -44,3 +44,26 @@
 	line-height: 24px;
 	color: $black;
 }
+
+// ============ button animation ============
+@keyframes button-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	75% {
+		transform: rotate(-2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@mixin button-animation {
+	animation-name: button-rotate;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}

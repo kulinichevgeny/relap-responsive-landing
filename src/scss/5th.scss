@@ -1,6 +1,6 @@
 .fifth__section {
-	padding: 55px 0 112px;
 	background-color: $pinkLight;
+	padding: 55px 0 112px;
 
 	.container {
 		@include flex-column;
@@ -8,7 +8,10 @@
 }
 
 .fifth__description {
+	@include flex-column;
+	align-items: center;
 	text-align: center;
+
 	margin-bottom: 48px;
 
 	.fifth__title {
@@ -19,6 +22,9 @@
 	.fifth__text {
 		@include text-style($secondaryFontSemiBold);
 		color: $black;
+
+		max-width: 570px;
+		width: 100%;
 	}
 }
 
@@ -35,23 +41,9 @@
 	box-shadow: $shadow;
 	border-radius: 3px;
 	background: $white;
+	transition: 0.2s linear;
+
 	padding: 53px 105px 48px;
-	background-image: none;
-
-	&:hover {
-		background-image: $gradient;
-
-		.fifth__card-body__title,
-		.fifth__card-body__price,
-		.fifth__card-body__list {
-			color: $white;
-		}
-
-		button {
-			background-color: $yellow;
-			color: $white !important;
-		}
-	}
 
 	.fifth__card-body {
 		&__title {
@@ -63,15 +55,17 @@
 		&__price {
 			@include h1-style;
 			color: $black;
-			margin-bottom: 26px;
 			transition: color 0.2s linear;
+
+			margin-bottom: 26px;
 		}
 
 		&__list {
 			@include text-style($secondaryFontRegular);
 			color: rgba($black, 0.5);
-			margin-bottom: 42px;
 			transition: color 0.2s linear;
+
+			margin-bottom: 42px;
 		}
 
 		&__button {
@@ -84,7 +78,30 @@
 				transition: 0.2s linear;
 
 				padding: 12px 48px;
+
+				&:hover {
+					@include button-animation;
+				}
 			}
+		}
+	}
+
+	&:hover {
+		background-image: $gradient;
+		box-shadow: $shadow-hover;
+
+		.fifth__card-body__title,
+		.fifth__card-body__price {
+			color: $white;
+		}
+
+		.fifth__card-body__list {
+			color: rgba($white, 0.5);
+		}
+
+		button {
+			background-color: $yellow;
+			color: $white;
 		}
 	}
 }

@@ -1,0 +1,54 @@
+.fourth__section {
+	.container {
+		@include flex-row;
+		justify-content: space-between;
+	}
+}
+
+.fourth__content {
+	max-width: 590px;
+	width: 100%;
+	margin-top: 103px;
+}
+
+// ========= description ===========
+.fourth__content-description {
+	@include flex-column;
+
+	&__title {
+		@include h2-style;
+		margin-bottom: 23px;
+	}
+
+	&__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+		margin-bottom: 54px;
+	}
+}
+
+// ========= stats ===========
+.fourth__content-stats {
+	@include flex-row;
+	flex-wrap: wrap;
+
+	.fourth__content-stat {
+		flex-basis: 50%;
+		margin-bottom: 32px;
+		padding-right: 30px;
+
+		img {
+			margin-bottom: 7px;
+		}
+
+		&__title {
+			@include h4-style;
+			margin-bottom: 9px;
+		}
+
+		&__text {
+			@include text-style($secondaryFontRegular);
+			color: rgba($black, 0.5);
+		}
+	}
+}

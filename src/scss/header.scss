@@ -1,39 +1,59 @@
 .header {
 	background: rgba($violet, 0.8);
+	box-shadow: $shadow-hover;
+
 	position: relative;
 	z-index: 1000;
 
 	.container {
-		display: flex;
+		@include flex-row;
 		justify-content: space-between;
 		align-items: center;
 
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding: 25px 0;
 	}
 }
 
-.header__logo {
-	display: flex;
-}
+.header__navbar {
+	@include flex-row;
 
-.header__nav {
-	display: flex;
-
+	// navigation links
 	.nav__links {
-		display: flex;
+		@include flex-row;
+
 		.nav__link {
 			@include text-style($secondaryFontSemiBold);
 			color: $white;
-
 			margin-right: 56px;
+
+			position: relative;
+
+			&:after {
+				content: "";
+				height: 3px;
+				width: 0%;
+
+				background-color: $white;
+				transition: 0.2s ease;
+
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+			}
+
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
 		}
 	}
 
+	// navigation menu
 	.nav__menu {
-		display: flex;
+		@include flex-row;
 
-		img:first-child {
+		a:first-child {
 			margin-right: 32px;
 		}
 	}

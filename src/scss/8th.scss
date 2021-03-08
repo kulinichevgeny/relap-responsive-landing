@@ -1,6 +1,4 @@
-.third__section {
-	background-color: $pinkLight;
-
+.eighth__section {
 	padding: 144px 0 112px;
 
 	.container {
@@ -9,9 +7,8 @@
 	}
 }
 
-.third__image {
+.eighth__image {
 	max-width: 570px;
-	min-height: 512px;
 	width: 100%;
 
 	border-radius: 3px;
@@ -19,6 +16,7 @@
 
 	img {
 		border-radius: 3px;
+		box-shadow: $shadow;
 
 		position: relative;
 		bottom: 30px;
@@ -26,47 +24,53 @@
 	}
 }
 
-.third__description {
+.eighth__description {
 	max-width: 470px;
+	width: 100%;
 
-	.third__title {
+	.eighth__title {
 		@include h2-style;
 		margin-bottom: 23px;
 	}
 
-	.third__suptext {
+	.eighth__suptext {
 		@include text-style($secondaryFontSemiBold);
 		color: $black;
-		margin-bottom: 6px;
+		margin-bottom: 10px;
 	}
 
-	.third__subtext {
+	.eighth__subtext {
 		@include text-style($secondaryFontRegular);
 		color: rgba($black, 0.5);
-		margin-bottom: 36px;
+		margin-bottom: 38px;
 	}
 
-	// ======== stats ========
-	.third__stats {
+	// ======== form ========
+	.eighth__form {
 		@include flex-row;
-		margin-bottom: 40px;
+		align-items: center;
+		justify-content: space-between;
 
-		.stats__title {
-			@include h3-style;
-			margin-bottom: 2px;
-		}
+		margin-bottom: 16px;
 
-		.stats__text {
-			@include small-text-style;
-		}
+		.eight__email {
+			@include text-style($secondaryFontRegular);
+			color: rgba($black, 0.5);
 
-		&-left {
-			margin-right: 118px;
+			width: 270px;
+			border-radius: 3px;
+			border: 1px solid #dadada;
+
+			padding: 12px 16px;
+
+			&:focus {
+				box-shadow: $shadow-hover;
+			}
 		}
 	}
 
 	// ======== button ========
-	.third__button {
+	.eighth__button {
 		button {
 			@include text-style($secondaryFontBold);
 			color: $white;
@@ -78,9 +82,16 @@
 			padding: 12px 54px;
 
 			&:hover {
+				@include button-animation;
+				box-shadow: 0 0 5px $yellow;
 				border-color: $yellow;
 				background-color: $yellow;
 			}
 		}
+	}
+
+	.eighth__credits {
+		@include small-text-style;
+		color: $black;
 	}
 }

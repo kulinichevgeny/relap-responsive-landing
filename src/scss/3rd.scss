@@ -1,4 +1,5 @@
-.eighth__section {
+.third__section {
+	background-color: $pinkLight;
 	padding: 144px 0 112px;
 
 	.container {
@@ -7,9 +8,9 @@
 	}
 }
 
-.eighth__image {
+// ======== image ========
+.third__image {
 	max-width: 570px;
-	min-height: 512px;
 	width: 100%;
 
 	border-radius: 3px;
@@ -17,6 +18,7 @@
 
 	img {
 		border-radius: 3px;
+		box-shadow: $shadow;
 
 		position: relative;
 		bottom: 30px;
@@ -24,54 +26,49 @@
 	}
 }
 
-.eighth__description {
+// ======== description ========
+.third__description {
 	max-width: 470px;
+	width: 100%;
 
-	.eighth__title {
+	.third__title {
 		@include h2-style;
 		margin-bottom: 23px;
 	}
 
-	.eighth__suptext {
+	.third__suptext {
 		@include text-style($secondaryFontSemiBold);
 		color: $black;
-		margin-bottom: 6px;
+		margin-bottom: 10px;
 	}
 
-	.eighth__subtext {
+	.third__subtext {
 		@include text-style($secondaryFontRegular);
 		color: rgba($black, 0.5);
-		margin-bottom: 38px;
+		margin-bottom: 36px;
 	}
 
-	// ======== form ========
-	.eighth__form {
+	// ======== stats ========
+	.third__stats {
 		@include flex-row;
-		align-items: center;
-		justify-content: space-between;
+		margin-bottom: 40px;
 
-		margin-bottom: 16px;
+		.stats__title {
+			@include h3-style;
+			margin-bottom: 2px;
+		}
 
-		.eight__email {
-			@include text-style($secondaryFontRegular);
-			color: rgba($black, 0.5);
+		.stats__text {
+			@include small-text-style;
+		}
 
-			width: 270px;
-
-			border-radius: 3px;
-			border: 1px solid #dadada;
-
-			padding: 12px 16px;
-
-			&:focus {
-				outline: none;
-				box-shadow: $shadow;
-			}
+		&-left {
+			margin-right: 118px;
 		}
 	}
 
 	// ======== button ========
-	.eighth__button {
+	.third__button {
 		button {
 			@include text-style($secondaryFontBold);
 			color: $white;
@@ -83,14 +80,11 @@
 			padding: 12px 54px;
 
 			&:hover {
+				@include button-animation;
+				box-shadow: 0 0 5px $yellow;
 				border-color: $yellow;
 				background-color: $yellow;
 			}
 		}
-	}
-
-	.eighth__credits {
-		@include small-text-style;
-		color: $black;
 	}
 }

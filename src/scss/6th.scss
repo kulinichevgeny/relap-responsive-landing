@@ -1,0 +1,132 @@
+.sixth__section {
+	.container {
+		@include flex-column;
+		padding: 55px 0 142px;
+		overflow: hidden;
+	}
+}
+
+.sixth__description {
+	@include flex-column;
+	align-items: center;
+	text-align: center;
+
+	margin-bottom: 48px;
+
+	.sixth__title {
+		@include h2-style;
+	}
+
+	.sixth__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+
+		width: 570px;
+
+		margin-top: 23px;
+	}
+}
+
+.carousel {
+	position: relative;
+
+	&__description {
+		@include flex-column;
+		justify-content: space-between;
+	}
+
+	&__avatar {
+		width: 124px;
+		height: 124px;
+		border-radius: 50%;
+
+		margin-bottom: 18px;
+	}
+
+	&__text {
+		@include text-style($secondaryFontRegular);
+		color: rgba($black, 0.5);
+		transition: 0.2s ease;
+
+		margin-bottom: 13px;
+	}
+
+	&__name {
+		position: relative;
+		@include h4-style;
+		transition: 0.2s ease;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -6px;
+			left: 0;
+
+			width: 0;
+			height: 3px;
+			background-color: $white;
+			transition: 0.3s ease;
+		}
+
+		&:hover {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// ======= slide track =========
+.slick-track {
+	@include flex-row;
+	justify-content: space-between;
+	overflow: visible !important;
+}
+
+.slick-slide {
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 0 15px rgba($black, 0.1);
+	outline: none;
+	transition: 0.2s linear;
+
+	margin: 0 15px;
+	padding: 48px 32px 60px;
+
+	&:hover {
+		background-image: $gradient;
+		box-shadow: 0 0 16px rgba($black, 0.5);
+
+		.carousel__text {
+			color: rgba($white, 0.5);
+		}
+
+		.carousel__name {
+			color: $white;
+		}
+	}
+}
+
+// ======== arrows ==========
+.slick-arrow {
+	font-size: 0;
+
+	width: 48px;
+	height: 48px;
+	border: 1px solid $pinkDark;
+	border-radius: 50%;
+
+	position: absolute;
+	left: 0;
+	bottom: -90px;
+}
+// arrow prev
+.slick-arrow.slick-prev {
+	left: 45%;
+	background: url(../img/section-6-eaque/left.svg) 45% 50% no-repeat;
+}
+// arrow next
+.slick-arrow.slick-next {
+	left: 51%;
+	background: url(../img/section-6-eaque/right.svg) 55% 50% no-repeat;
+}

@@ -36,9 +36,11 @@
 			padding: 12px 62px;
 
 			&:hover {
+				@include button-animation;
 				color: $white;
 
 				border-color: $yellow;
+				box-shadow: 0 0 5px $yellow;
 				background-color: $yellow;
 			}
 		}
@@ -55,41 +57,32 @@
 	justify-content: flex-end;
 
 	height: 464px;
+	transition: box-shadow 0.2s linear;
+	box-shadow: $shadow;
 
 	padding: 0 0 40px 32px;
-
-	transition: box-shadow 0.2s linear;
 
 	&:first-child {
 		max-width: 570px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/flower.png);
-		background-size: cover;
-		background-position: center;
 	}
-
 	&:nth-child(2) {
 		max-width: 270px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/wineglass.png);
-		background-size: cover;
-		background-position: center;
 	}
-
 	&:last-child {
 		max-width: 270px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/pen.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 	}
 
 	&:hover {
-		box-shadow: $shadow-hover;
+		box-shadow: 0 0 48px rgba($black, 0.6);
 	}
 
 	&__title {

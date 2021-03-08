@@ -1,17 +1,20 @@
 .second__section {
 	position: relative;
 	z-index: 1000;
-	padding: 55px 0 32px;
+	padding: 55px 0 40px;
 }
 
 .second__description {
 	max-width: 570px;
+	width: 100%;
+
 	text-align: center;
+
 	margin: 0 auto 32px;
 
 	.second__title {
 		@include h2-style;
-		margin-bottom: 23px;
+		margin-bottom: 24px;
 	}
 
 	.second__text {
@@ -28,7 +31,8 @@
 	.second__card {
 		@include flex-column;
 		align-items: center;
-		flex-basis: 370px;
+		max-width: 370px;
+		width: 100%;
 
 		border-radius: 3px;
 		box-shadow: $shadow;
@@ -42,12 +46,12 @@
 		}
 
 		&-image {
-			margin-bottom: 11px;
+			margin-bottom: 10px;
 		}
 
 		&-title {
 			@include h4-style;
-			margin-bottom: 9px;
+			margin-bottom: 10px;
 		}
 
 		&-text {
