@@ -12,8 +12,23 @@
 // ========== social ============
 .footer__social {
 	@include flex-row;
+	flex-wrap: wrap;
 	justify-content: space-between;
+
+	position: relative;
+
 	padding: 62px 0;
+
+	@media (max-width: $tablet) {
+		justify-content: space-evenly;
+	}
+	@media (max-width: $mobileL) {
+		padding: 40px 0;
+	}
+	@media (max-width: $mobileM) {
+		@include flex-column;
+		padding: 32px 0;
+	}
 
 	li,
 	.footer__description-text {
@@ -25,51 +40,90 @@
 		margin-bottom: 8px;
 	}
 
+	// description
 	.footer__description {
 		max-width: 238px;
 		width: 100%;
 
+		@media (max-width: $tablet) {
+			max-width: 320px;
+			margin-bottom: 60px;
+		}
+		@media (max-width: $mobileM) {
+			margin-bottom: 24px;
+		}
+
 		&-title {
 			margin-bottom: 8px;
 		}
+
+		&-text {
+			@media (max-width: $tablet) {
+				max-width: 270px;
+			}
+		}
 	}
 
+	// works
 	.footer__works {
 		max-width: 157px;
 		width: 100%;
+
+		@media (max-width: $tablet) {
+			max-width: 300px;
+		}
+		@media (max-width: $mobileM) {
+			margin-bottom: 24px;
+		}
 
 		&-work:first-child {
 			margin-top: 8px;
 		}
 	}
 
+	// contacts
 	.footer__contacts {
 		max-width: 191px;
 		width: 100%;
+
+		@media (max-width: $tablet) {
+			max-width: 320px;
+		}
+		@media (max-width: $mobileM) {
+			margin-bottom: 24px;
+		}
 
 		&-contact:first-child {
 			margin-top: 8px;
 		}
 	}
 
+	// subscribe
 	.footer__subscribe {
+		max-width: 270px;
+		width: 100%;
+
+		@media (max-width: $tablet) {
+			max-width: 300px;
+		}
+
 		&-title {
 			margin-bottom: 8px;
 		}
 
-		input {
-			@include text-style($secondaryFontRegular);
-			color: rgba($black, 0.5);
-
-			border-radius: 3px;
-			border: 1px solid #dadada;
-
-			padding: 12px 16px;
-			margin-right: 8px;
-		}
-
 		&-form {
 			@include flex-row;
+
+			input {
+				@include text-style($secondaryFontRegular);
+				color: rgba($black, 0.5);
+
+				border-radius: 3px;
+				border: 1px solid #dadada;
+
+				padding: 12px 16px;
+				margin-right: 8px;
+			}
 		}
 
 		&-form__image {
@@ -106,4 +160,14 @@
 	border-top: 1px solid rgba($black, 0.1);
 
 	padding: 30px 0;
+
+	@media (max-width: $tablet) {
+		padding: 22px 0;
+	}
+	@media (max-width: $mobileL) {
+		padding: 16px 0;
+	}
+	@media (max-width: $mobileM) {
+		padding: 12px 0;
+	}
 }

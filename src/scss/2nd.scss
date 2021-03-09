@@ -1,7 +1,14 @@
 .second__section {
 	position: relative;
-	z-index: 1000;
+	z-index: 2;
 	padding: 55px 0 40px;
+
+	@media (max-width: $mobileL) {
+		padding: 34px 0 20px;
+	}
+	@media (max-width: $mobile) {
+		padding: 32px 0 20px;
+	}
 }
 
 .second__description {
@@ -28,6 +35,10 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 
+	@media (max-width: $laptop-sm) {
+		justify-content: space-evenly;
+	}
+
 	.second__card {
 		@include flex-column;
 		align-items: center;
@@ -40,6 +51,19 @@
 
 		padding: 32px 24px;
 		margin-bottom: 32px;
+
+		@media (max-width: $laptop-sm) {
+			max-width: 440px;
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: 22px;
+		}
+		@media (max-width: $mobileL) {
+			margin-bottom: 18px;
+		}
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 
 		&:hover {
 			box-shadow: $shadow-hover;
@@ -58,6 +82,10 @@
 			@include text-style($secondaryFontRegular);
 			text-align: center;
 			color: rgba($black, 0.5);
+
+			@media (max-width: $tablet) {
+				padding: 0 10px;
+			}
 		}
 	}
 }

@@ -11,12 +11,12 @@ $(document).ready(function () {
 		easing: 'ease',
 		infinite: true,
 		initialSlide: 0,
-		draggable: false,
+		draggable: true,
 		swipe: true,
 		touchMove: true,
 		responsive: [
 			{
-				breakpoint: 150,
+				breakpoint: 767,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1

@@ -1,6 +1,22 @@
 .fifth__section {
 	background-color: $pinkLight;
-	padding: 55px 0 112px;
+	padding: 55px 0 90px;
+
+	@media (max-width: $laptop-sm) {
+		padding: 55px 0 70px;
+		margin-top: -70px;
+	}
+	@media (max-width: $tablet) {
+		padding: 50px 0 30px;
+	}
+	@media (max-width: $mobileL) {
+		padding: 38px 0 30px;
+		margin-top: -80px;
+	}
+	@media (max-width: $mobileM) {
+		padding: 32px 0 28px;
+		margin-top: -90px;
+	}
 
 	.container {
 		@include flex-column;
@@ -26,12 +42,46 @@
 		max-width: 570px;
 		width: 100%;
 	}
+
+	button {
+		display: none;
+
+		@include text-style($secondaryFontBold);
+		color: $pinkDark;
+
+		border: 1px solid $pinkDark;
+		border-radius: 24px;
+		transition: 0.2s linear;
+
+		padding: 12px 62px;
+		margin-top: 26px;
+
+		@media (max-width: $laptop-sm) {
+			display: block;
+		}
+		@media (max-width: $mobileM) {
+			display: none;
+		}
+
+		&:hover {
+			@include button-animation;
+			color: $white;
+
+			border-color: $yellow;
+			box-shadow: 0 0 5px $yellow;
+			background-color: $yellow;
+		}
+	}
 }
 
 .fifth__cards {
 	@include flex-row;
 	justify-content: space-between;
 	flex-wrap: wrap;
+
+	@media (max-width: $laptop-sm) {
+		justify-content: space-evenly;
+	}
 }
 
 .fifth__card {
@@ -44,6 +94,27 @@
 	transition: 0.2s linear;
 
 	padding: 53px 105px 48px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 30px;
+	}
+	@media (max-width: $mobileL) {
+		flex-basis: 60%;
+		margin-bottom: 24px;
+	}
+	@media (max-width: $mobileM) {
+		flex-basis: 100%;
+		margin-bottom: 18px;
+	}
+
+	&:last-child {
+		@media (max-width: $laptop-sm) {
+			display: none;
+		}
+		@media (max-width: $mobileM) {
+			display: block;
+		}
+	}
 
 	.fifth__card-body {
 		&__title {

@@ -2,9 +2,27 @@
 	background-color: $pinkLight;
 	padding: 144px 0 112px;
 
+	@media (max-width: $laptop-sm) {
+		padding: 100px 0 80px;
+	}
+	@media (max-width: $tablet) {
+		padding: 80px 0 60px;
+	}
+	@media (max-width: $mobileL) {
+		padding: 70px 0 48px;
+	}
+	@media (max-width: $mobile) {
+		padding: 64px 0 48px;
+	}
+
 	.container {
 		@include flex-row;
 		justify-content: space-between;
+
+		@media (max-width: $laptop-sm) {
+			@include flex-column;
+			align-items: center;
+		}
 	}
 }
 
@@ -16,6 +34,17 @@
 	border-radius: 3px;
 	background: $gradient;
 
+	@media (max-width: $laptop-sm) {
+		margin-bottom: 48px;
+	}
+	@media (max-width: $tablet) {
+		align-self: center;
+	}
+	@media (max-width: $mobileM) {
+		align-self: flex-start;
+		max-width: 87vw;
+	}
+
 	img {
 		border-radius: 3px;
 		box-shadow: $shadow;
@@ -23,6 +52,12 @@
 		position: relative;
 		bottom: 30px;
 		left: 30px;
+
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			bottom: 17px;
+			left: 17px;
+		}
 	}
 }
 

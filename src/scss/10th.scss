@@ -1,9 +1,28 @@
 .tenth__section {
 	padding: 103px 0 112px;
 
+	@media (max-width: $laptop-sm) {
+		padding: 60px 0 80px;
+	}
+	@media (max-width: $tablet) {
+		padding: 50px 0 70px;
+	}
+	@media (max-width: $mobileL) {
+		padding: 40px 0 60px;
+	}
+	@media (max-width: $mobileM) {
+		padding: 30px 0 50px;
+	}
+
 	.container {
 		@include flex-row;
+		flex-wrap: wrap;
 		justify-content: space-between;
+
+		@media (max-width: $laptop-sm) {
+			@include flex-column;
+			align-items: center;
+		}
 	}
 }
 
@@ -11,6 +30,10 @@
 .tenth__description {
 	max-width: 470px;
 	width: 100%;
+
+	@media (max-width: $laptop-sm) {
+		margin-bottom: 48px;
+	}
 
 	.tenth__title {
 		@include h2-style;

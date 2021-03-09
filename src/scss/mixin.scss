@@ -14,12 +14,38 @@
 	font-size: 72px;
 	line-height: 72px;
 	color: $white;
+
+	@media (max-width: $laptop-sm) {
+		font-size: 68px;
+		line-height: 70px;
+	}
+	@media (max-width: $tablet) {
+		font-size: 62px;
+		line-height: 68px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 46px;
+		line-height: 52px;
+	}
 }
 @mixin h2-style {
 	font-family: $primaryFontBold;
 	font-size: 56px;
 	line-height: 64px;
 	color: $black;
+
+	@media (max-width: $laptop-sm) {
+		font-size: 52px;
+		line-height: 58px;
+	}
+	@media (max-width: $tablet) {
+		font-size: 46px;
+		line-height: 52px;
+	}
+	@media (max-width: $mobile) {
+		font-size: 40px;
+		line-height: 48px;
+	}
 }
 @mixin h3-style {
 	font-family: $primaryFontBold;

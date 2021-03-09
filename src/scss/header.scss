@@ -3,14 +3,32 @@
 	box-shadow: $shadow-hover;
 
 	position: relative;
-	z-index: 1000;
+	z-index: 2;
 
 	.container {
 		@include flex-row;
 		justify-content: space-between;
 		align-items: center;
 
-		padding: 25px 0;
+		padding: 25px 15px;
+
+		@media (max-width: $laptop-sm) {
+			padding: 20px 15px;
+		}
+		@media (max-width: $tablet) {
+			padding: 18px 15px;
+		}
+		@media (max-width: $mobileL) {
+			padding: 10px 15px;
+		}
+	}
+}
+
+.header__logo {
+	img {
+		@media (max-width: $mobileL) {
+			max-width: 80px;
+		}
 	}
 }
 
@@ -20,6 +38,10 @@
 	// navigation links
 	.nav__links {
 		@include flex-row;
+
+		@media (max-width: $tablet) {
+			display: none;
+		}
 
 		.nav__link {
 			@include text-style($secondaryFontSemiBold);
@@ -52,9 +74,5 @@
 	// navigation menu
 	.nav__menu {
 		@include flex-row;
-
-		a:first-child {
-			margin-right: 32px;
-		}
 	}
 }

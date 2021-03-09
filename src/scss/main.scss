@@ -1,20 +1,64 @@
 .main {
 	background: $gradient;
+	position: relative;
 
-	.container {
-		padding: 160px 0;
+	& > .container {
+		padding: 160px 15px;
+
+		@media (max-width: $laptop-sm) {
+			padding: 160px 15px 80px;
+		}
+		@media (max-width: $tablet) {
+			padding: 160px 15px 64px;
+		}
+		@media (max-width: $mobileL) {
+			padding: 160px 15px 30px;
+		}
+		@media (max-width: $mobile) {
+			padding: 280px 15px 32px;
+		}
 	}
 
 	&__image {
 		position: absolute;
 		top: 0;
 		right: 0;
+		z-index: 1;
+
+		@media (max-width: $laptop-sm) {
+			height: 1150px;
+		}
+		@media (max-width: $tablet) {
+			height: 900px;
+		}
+		@media (max-width: $mobileL) {
+			height: 780px;
+		}
+		@media (max-width: $mobile) {
+			height: 640px;
+		}
 	}
 }
 
 .main__description {
 	max-width: 570px;
 	width: 100%;
+
+	position: relative;
+	z-index: 2;
+
+	@media (max-width: $laptop-sm) {
+		max-width: 550px;
+	}
+	@media (max-width: $tablet) {
+		max-width: 515px;
+	}
+	@media (max-width: $mobileL) {
+		max-width: 480px;
+	}
+	@media (max-width: $mobile) {
+		max-width: 100%;
+	}
 
 	.main__title {
 		@include h1-style;

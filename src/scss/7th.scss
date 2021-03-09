@@ -1,30 +1,67 @@
 .seventh__section {
 	background-color: $pinkLight;
-	padding: 63px 0 112px;
+	padding: 63px 0 90px;
+
+	@media (max-width: $laptop-sm) {
+		padding: 62px 0 80px;
+	}
+	@media (max-width: $tablet) {
+		padding: 50px 0 64px;
+	}
+	@media (max-width: $mobileL) {
+		padding: 38px 0 55px;
+	}
+	@media (max-width: $mobileM) {
+		padding: 30px 0 50px;
+	}
 
 	.container {
 		@include flex-column;
 	}
 }
 
-.secenth__section-description {
+.seventh__section-description {
 	@include flex-row;
 	align-items: center;
 	justify-content: space-between;
 
 	margin-bottom: 64px;
 
+	@media (max-width: $tablet) {
+		@include flex-column;
+		align-items: center;
+		text-align: center;
+	}
+	@media (max-width: $mobileM) {
+		margin-bottom: 20px;
+	}
+
 	&__title {
 		@include h2-style;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 24px;
+		}
+		@media (max-width: $mobileM) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
 		@include text-style($secondaryFontRegular);
 		color: rgba($black, 0.5);
 		max-width: 370px;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__button {
+		@media (max-width: $mobileM) {
+			display: none;
+		}
+
 		button {
 			@include text-style($secondaryFontBold);
 			color: $pinkDark;
@@ -47,38 +84,79 @@
 	}
 }
 
-.secenth__section-cards {
+.seventh__section-cards {
 	@include flex-row;
+	flex-wrap: wrap;
 	justify-content: space-between;
+
+	@media (max-width: $tablet) {
+		justify-content: space-evenly;
+	}
 }
 
-.secenth__section-card {
+.seventh__section-card {
 	@include flex-column;
 	justify-content: flex-end;
 
 	height: 464px;
 	transition: box-shadow 0.2s linear;
 	box-shadow: $shadow;
+	border-radius: 4px;
 
 	padding: 0 0 40px 32px;
+
+	@media (max-width: $mobileM) {
+		margin-top: 16px;
+	}
 
 	&:first-child {
 		max-width: 570px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/flower.png);
+
+		@media (max-width: $laptop-sm) {
+			max-width: 420px;
+			background-position: center;
+		}
+		@media (max-width: $tablet) {
+			max-width: 57%;
+		}
+		@media (max-width: $mobileM) {
+			max-width: 100%;
+		}
 	}
 	&:nth-child(2) {
 		max-width: 270px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/wineglass.png);
+
+		@media (max-width: $mobileM) {
+			max-width: 570px;
+
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	}
 	&:last-child {
 		max-width: 270px;
 		width: 100%;
 
 		background-image: url(../img/section-7-veritatis/pen.png);
+
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		@media (max-width: $mobileM) {
+			display: flex;
+			max-width: 570px;
+
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	}
 
 	&:hover {

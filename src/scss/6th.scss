@@ -1,8 +1,15 @@
 .sixth__section {
 	.container {
 		@include flex-column;
-		padding: 55px 0 142px;
+		padding: 55px 15px 142px;
 		overflow: hidden;
+
+		@media (max-width: $mobileL) {
+			padding: 35px 15px 130px;
+		}
+		@media (max-width: $mobileM) {
+			padding: 30px 15px 130px;
+		}
 	}
 }
 
@@ -21,7 +28,7 @@
 		@include text-style($secondaryFontSemiBold);
 		color: $black;
 
-		width: 570px;
+		max-width: 570px;
 
 		margin-top: 23px;
 	}
@@ -117,16 +124,47 @@
 	border-radius: 50%;
 
 	position: absolute;
-	left: 0;
 	bottom: -90px;
 }
 // arrow prev
 .slick-arrow.slick-prev {
 	left: 45%;
 	background: url(../img/section-6-eaque/left.svg) 45% 50% no-repeat;
+
+	@media (max-width: $laptop-sm) {
+		left: 45%;
+	}
+	@media (max-width: $tablet) {
+		left: 43%;
+	}
+	@media (max-width: $mobileL) {
+		left: 39%;
+	}
+	@media (max-width: $mobileM) {
+		left: 34%;
+	}
+	@media (max-width: $mobileS) {
+		left: 30%;
+	}
 }
 // arrow next
 .slick-arrow.slick-next {
-	left: 51%;
+	right: 45%;
 	background: url(../img/section-6-eaque/right.svg) 55% 50% no-repeat;
+
+	@media (max-width: $laptop-sm) {
+		right: 45%;
+	}
+	@media (max-width: $tablet) {
+		right: 43%;
+	}
+	@media (max-width: $mobileL) {
+		right: 39%;
+	}
+	@media (max-width: $mobileM) {
+		right: 34%;
+	}
+	@media (max-width: $mobileS) {
+		right: 30%;
+	}
 }
