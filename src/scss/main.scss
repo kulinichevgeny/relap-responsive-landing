@@ -9,13 +9,16 @@
 			padding: 160px 15px 80px;
 		}
 		@media (max-width: $tablet) {
-			padding: 160px 15px 64px;
+			padding: 170px 15px 64px;
 		}
 		@media (max-width: $mobileL) {
-			padding: 160px 15px 30px;
+			padding: 190px 15px 30px;
+		}
+		@media (max-width: $mobileM) {
+			padding: 320px 15px 30px;
 		}
 		@media (max-width: $mobile) {
-			padding: 280px 15px 32px;
+			padding: 275px 15px 32px;
 		}
 	}
 
@@ -23,19 +26,22 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		z-index: 1;
+		z-index: 2;
 
 		@media (max-width: $laptop-sm) {
 			height: 1150px;
 		}
 		@media (max-width: $tablet) {
-			height: 900px;
+			height: 870px;
 		}
 		@media (max-width: $mobileL) {
-			height: 780px;
+			height: 750px;
+		}
+		@media (max-width: $mobileM) {
+			height: 590px;
 		}
 		@media (max-width: $mobile) {
-			height: 640px;
+			height: 570px;
 		}
 	}
 }
