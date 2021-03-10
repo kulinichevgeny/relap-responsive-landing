@@ -44,6 +44,7 @@ button {
 
 input {
 	font-family: inherit;
+	transition: 0.2s linear;
 
 	&:focus {
 		outline: none;

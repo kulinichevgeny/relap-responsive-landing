@@ -106,12 +106,12 @@
 
 			@media (max-width: $mobileM) {
 				display: block;
-				min-width: 377px;
+				min-width: 370px;
 				margin-bottom: 16px;
 			}
 			@media (max-width: $mobile) {
 				display: block;
-				min-width: 350px;
+				min-width: 320px;
 				margin-bottom: 16px;
 			}
 
@@ -138,6 +138,11 @@
 				box-shadow: 0 0 5px $yellow;
 				border-color: $yellow;
 				background-color: $yellow;
+			}
+			&:active {
+				transition: 0s ease 0s;
+				background-color: $white;
+				color: $yellow;
 			}
 		}
 	}

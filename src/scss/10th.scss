@@ -136,6 +136,11 @@
 				border-color: $yellow;
 				background-color: $yellow;
 			}
+			&:active {
+				transition: 0s ease 0s;
+				background-color: $white;
+				color: $yellow;
+			}
 		}
 	}
 }

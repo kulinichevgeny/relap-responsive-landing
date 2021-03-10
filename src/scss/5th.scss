@@ -71,6 +71,11 @@
 			box-shadow: 0 0 5px $yellow;
 			background-color: $yellow;
 		}
+		&:active {
+			transition: 0s ease 0s;
+			background-color: $white;
+			color: $yellow;
+		}
 	}
 }
 
@@ -153,6 +158,11 @@
 
 				&:hover {
 					@include button-animation;
+				}
+				&:active {
+					transition: 0s ease 0s;
+					background-color: $white;
+					color: $yellow;
 				}
 			}
 		}

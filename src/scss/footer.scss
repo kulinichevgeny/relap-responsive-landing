@@ -147,6 +147,11 @@
 				box-shadow: 0 0 5px $yellow;
 				background-color: $yellow;
 			}
+			&:active {
+				transition: 0s ease 0s;
+				box-shadow: 0 0 5px $pinkDark;
+				background-color: $pinkDark;
+			}
 		}
 	}
 }

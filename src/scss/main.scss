@@ -92,6 +92,11 @@
 				@include button-animation;
 				box-shadow: 0 0 5px $yellow;
 			}
+			&:active {
+				transition: 0s ease 0s;
+				background-color: $white;
+				color: $yellow;
+			}
 		}
 	}
 }

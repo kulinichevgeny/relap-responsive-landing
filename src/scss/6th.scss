@@ -122,9 +122,19 @@
 	height: 48px;
 	border: 1px solid $pinkDark;
 	border-radius: 50%;
+	transition: 0.2s linear;
 
 	position: absolute;
 	bottom: -90px;
+
+	&:hover {
+		box-shadow: 0 0 5px $pinkDark;
+	}
+	&:active {
+		transition: 0s ease 0s;
+		border: 1px solid $yellow;
+		box-shadow: 0 0 5px $yellow;
+	}
 }
 // arrow prev
 .slick-arrow.slick-prev {
