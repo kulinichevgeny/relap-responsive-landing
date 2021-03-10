@@ -1,0 +1,91 @@
+.second__section {
+	position: relative;
+	z-index: 2;
+	padding: 55px 0 40px;
+
+	@media (max-width: $mobileL) {
+		padding: 34px 0 20px;
+	}
+	@media (max-width: $mobile) {
+		padding: 32px 0 20px;
+	}
+}
+
+.second__description {
+	max-width: 570px;
+	width: 100%;
+
+	text-align: center;
+
+	margin: 0 auto 32px;
+
+	.second__title {
+		@include h2-style;
+		margin-bottom: 24px;
+	}
+
+	.second__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $black;
+	}
+}
+
+.second__cards {
+	@include flex-row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media (max-width: $laptop-sm) {
+		justify-content: space-evenly;
+	}
+
+	.second__card {
+		@include flex-column;
+		align-items: center;
+		max-width: 370px;
+		width: 100%;
+
+		border-radius: 3px;
+		box-shadow: $shadow;
+		transition: box-shadow 0.2s linear;
+
+		padding: 32px 24px;
+		margin-bottom: 32px;
+
+		@media (max-width: $laptop-sm) {
+			max-width: 440px;
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: 22px;
+		}
+		@media (max-width: $mobileL) {
+			margin-bottom: 18px;
+		}
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
+
+		&:hover {
+			box-shadow: $shadow-hover;
+		}
+
+		&-image {
+			margin-bottom: 10px;
+		}
+
+		&-title {
+			@include h4-style;
+			margin-bottom: 10px;
+		}
+
+		&-text {
+			@include text-style($secondaryFontRegular);
+			text-align: center;
+			color: rgba($black, 0.5);
+
+			@media (max-width: $tablet) {
+				padding: 0 10px;
+			}
+		}
+	}
+}

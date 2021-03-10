@@ -1,0 +1,177 @@
+.header {
+	position: relative;
+	z-index: 50;
+
+	@media (max-width: $tablet) {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($violet, 0.8);
+		box-shadow: $shadow-hover;
+		z-index: 2;
+	}
+
+	&__body {
+		@include flex-row;
+		justify-content: space-between;
+		align-items: center;
+
+		position: relative;
+
+		padding: 25px 0;
+
+		@media (max-width: $laptop-sm) {
+			padding: 20px 0;
+		}
+		@media (max-width: $tablet) {
+			padding: 10px 0;
+		}
+	}
+}
+
+.header__logo {
+	position: relative;
+	z-index: 3;
+
+	img {
+		@media (max-width: $tablet) {
+			max-height: 32px;
+		}
+	}
+}
+
+.header__burger {
+	display: none;
+
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+		&:before {
+			top: 0;
+		}
+		&:after {
+			bottom: 0;
+		}
+
+		&.active span {
+			transform: scale(0);
+		}
+
+		&.active:before {
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&.active:after {
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+	}
+
+	span {
+		@media (max-width: $tablet) {
+			position: absolute;
+			background-color: $white;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+
+.header__menu {
+	@include flex-row;
+
+	@media (max-width: $tablet) {
+		justify-content: flex-start;
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		background: rgba($violet, 0.8);
+		padding: 40px 0 0;
+	}
+
+	&.active {
+		top: 0;
+	}
+
+	// navigation links
+	.header__list {
+		@include flex-row;
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: $tablet) {
+			@include flex-column;
+			align-items: flex-start;
+			justify-content: space-evenly;
+		}
+
+		.header__link {
+			@include text-style($secondaryFontSemiBold);
+			color: $white;
+			margin-left: 15px;
+
+			position: relative;
+
+			@media (min-width: $tablet) {
+				margin-left: 56px;
+			}
+
+			@media (max-width: $tablet) {
+				@include h4-style;
+				color: $white;
+			}
+
+			&:after {
+				content: "";
+				height: 3px;
+				width: 0%;
+
+				background-color: $white;
+				transition: 0.2s ease;
+
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+			}
+
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

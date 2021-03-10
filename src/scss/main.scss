@@ -1,0 +1,102 @@
+.main {
+	background: $gradient;
+	position: relative;
+
+	& > .container {
+		padding: 160px 15px;
+
+		@media (max-width: $laptop-sm) {
+			padding: 160px 15px 80px;
+		}
+		@media (max-width: $tablet) {
+			padding: 170px 15px 64px;
+		}
+		@media (max-width: $mobileL) {
+			padding: 190px 15px 30px;
+		}
+		@media (max-width: $mobileM) {
+			padding: 320px 15px 30px;
+		}
+		@media (max-width: $mobile) {
+			padding: 275px 15px 32px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+
+		@media (max-width: $laptop-sm) {
+			height: 1150px;
+		}
+		@media (max-width: $tablet) {
+			height: 870px;
+		}
+		@media (max-width: $mobileL) {
+			height: 750px;
+		}
+		@media (max-width: $mobileM) {
+			height: 590px;
+		}
+		@media (max-width: $mobile) {
+			height: 570px;
+		}
+	}
+}
+
+.main__description {
+	max-width: 570px;
+	width: 100%;
+
+	position: relative;
+	z-index: 20;
+
+	@media (max-width: $laptop-sm) {
+		max-width: 550px;
+	}
+	@media (max-width: $tablet) {
+		max-width: 515px;
+	}
+	@media (max-width: $mobileL) {
+		max-width: 480px;
+	}
+	@media (max-width: $mobile) {
+		max-width: 100%;
+	}
+
+	.main__title {
+		@include h1-style;
+		margin-bottom: 25px;
+	}
+
+	.main__text {
+		@include text-style($secondaryFontSemiBold);
+		color: $white;
+		margin-bottom: 34px;
+	}
+
+	.main__button {
+		button {
+			@include text-style($primaryFontBold);
+			color: $white;
+
+			border-radius: 24px;
+			background-color: $yellow;
+			transition: 0.2s linear;
+
+			padding: 14px 44px;
+
+			&:hover {
+				@include button-animation;
+				box-shadow: 0 0 5px $yellow;
+			}
+			&:active {
+				transition: 0s ease 0s;
+				background-color: $white;
+				color: $yellow;
+			}
+		}
+	}
+}
