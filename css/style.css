@@ -45,6 +45,9 @@ button {
 
 input {
   font-family: inherit;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 input:focus {
@@ -201,6 +204,14 @@ ul {
           animation-iteration-count: infinite;
   -webkit-box-shadow: 0 0 5px #ffc300;
           box-shadow: 0 0 5px #ffc300;
+}
+
+.main__description .main__button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
 }
 
 .header {
@@ -516,6 +527,14 @@ ul {
   background-color: #ffc300;
 }
 
+.third__description .third__button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
+}
+
 .fourth__section .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -677,6 +696,14 @@ ul {
   background-color: #ffc300;
 }
 
+.fifth__description button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
+}
+
 .fifth__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,6 +789,14 @@ ul {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.fifth__card .fifth__card-body__button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
 }
 
 .fifth__card:hover {
@@ -941,8 +976,25 @@ ul {
   height: 48px;
   border: 1px solid #c86dd7;
   border-radius: 50%;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   position: absolute;
   bottom: -90px;
+}
+
+.slick-arrow:hover {
+  -webkit-box-shadow: 0 0 5px #c86dd7;
+          box-shadow: 0 0 5px #c86dd7;
+}
+
+.slick-arrow:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  border: 1px solid #ffc300;
+  -webkit-box-shadow: 0 0 5px #ffc300;
+          box-shadow: 0 0 5px #ffc300;
 }
 
 .slick-arrow.slick-prev {
@@ -1029,6 +1081,14 @@ ul {
   -webkit-box-shadow: 0 0 5px #ffc300;
           box-shadow: 0 0 5px #ffc300;
   background-color: #ffc300;
+}
+
+.seventh__section-description__button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
 }
 
 .seventh__section-cards {
@@ -1239,6 +1299,14 @@ ul {
   background-color: #ffc300;
 }
 
+.eighth__description .eighth__button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
+}
+
 .eighth__description .eighth__credits {
   font-family: "Source Sans Pro Semi Bold";
   font-size: 12px;
@@ -1282,6 +1350,14 @@ ul {
   -webkit-box-shadow: 0 0 5px #ffc300;
           box-shadow: 0 0 5px #ffc300;
   background-color: #ffc300;
+}
+
+.ninth__section .container button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
 }
 
 .ninth__title {
@@ -1497,6 +1573,14 @@ ul {
   background-color: #ffc300;
 }
 
+.tenth__form-button button:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  background-color: #fff;
+  color: #ffc300;
+}
+
 .footer {
   background-color: #fdf2ff;
 }
@@ -1628,6 +1712,15 @@ ul {
   -webkit-box-shadow: 0 0 5px #ffc300;
           box-shadow: 0 0 5px #ffc300;
   background-color: #ffc300;
+}
+
+.footer__social .footer__subscribe-form__image:active {
+  -webkit-transition: 0s ease 0s;
+  -o-transition: 0s ease 0s;
+  transition: 0s ease 0s;
+  -webkit-box-shadow: 0 0 5px #c86dd7;
+          box-shadow: 0 0 5px #c86dd7;
+  background-color: #c86dd7;
 }
 
 .footer__credits {
@@ -1919,7 +2012,7 @@ ul {
   }
 
   .header__logo img {
-    max-width: 80px;
+    max-height: 32px;
   }
 
   .header__burger {
@@ -1993,7 +2086,7 @@ ul {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
     overflow: auto;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -2419,7 +2512,7 @@ ul {
 
   .eighth__description .eighth__form .eight__email {
     display: block;
-    min-width: 377px;
+    min-width: 370px;
     margin-bottom: 16px;
   }
 
@@ -2554,7 +2647,7 @@ ul {
 
   .eighth__description .eighth__form .eight__email {
     display: block;
-    min-width: 350px;
+    min-width: 320px;
     margin-bottom: 16px;
   }
 
