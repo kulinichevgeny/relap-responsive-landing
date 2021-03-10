@@ -161,7 +161,7 @@ ul {
   max-width: 570px;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 .main__description .main__title {
