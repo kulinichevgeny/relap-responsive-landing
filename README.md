@@ -1,11 +1,11 @@
-# 	<a href="https://kulinichevgeny.github.io/relap-responsive-landing/">RELAP</a> - Graduation Work
+# 	<a href="https://kulinichevgeny.github.io/relap-responsive-landing/">RELAP</a> - Responsive Langing Page
 
-<a href="https://kulinichevgeny.github.io/relap-responsive-landing/"><img src="./src/img/preview.gif"></a>
+![Preview](./src/img/preview.gif)
 
 
 ## About
 
-This is my IT SHATLE graduation work. Made with HTML, Sass and JavaScript. You are welcome!
+This is my IT SHATLE graduation work. Made with HTML, Sass(SCSS) and JavaScript (Slick Slider). You are welcome!
 
 ## Questions?
 
