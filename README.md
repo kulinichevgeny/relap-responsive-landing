@@ -5,7 +5,7 @@
 
 ## About
 
-This is my IT SHATLE graduation work. Made with HTML, Sass and JavaScript. You are welcome!
+This is my IT SHATLE graduation work. Made with HTML, Sass(SCSS) and JavaScript (Slick Slider). You are welcome!
 
 ## Questions?
 
