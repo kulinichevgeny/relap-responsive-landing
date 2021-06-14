@@ -1,4 +1,4 @@
-# 	<a href="https://kulinichevgeny.github.io/relap-responsive-landing/">RELAP</a> - Responsive Langing Page
+# <a href="https://kulinichevgeny.github.io/relap-responsive-landing/">RELAP</a> - Responsive Langing Page
 
 ![Preview](./src/img/preview.gif)
 
