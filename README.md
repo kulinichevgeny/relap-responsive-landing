@@ -7,6 +7,8 @@
         <img src="https://img.shields.io/github/commit-activity/m/kulinichevgeny/relap-responsive-landing" /></a>
     <a href="#" alt="Last commit">
         <img src="https://img.shields.io/github/last-commit/kulinichevgeny/relap-responsive-landing" /></a>
+    <a href="https://github.com/kulinichevgeny/relap-responsive-landing" alt="repo Size">
+        <img src="https://img.shields.io/github/repo-size/kulinichevgeny/relap-responsive-landing" /></a>
     <a href="https://github.com/kulinichevgeny/relap-responsive-landing/blob/master/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/kulinichevgeny/relap-responsive-landing.svg" /></a>
     <a href="#" alt="License">
